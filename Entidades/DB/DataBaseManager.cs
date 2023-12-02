@@ -12,7 +12,7 @@ namespace Entidades.DataBase
         
         static DataBaseManager()
         {
-            DataBaseManager.stringConnection = "Server=.;Database=20230622SP;Trusted_Connection=True;";
+            DataBaseManager.stringConnection = "Server=.;Database=SP_20231201_JPG;Trusted_Connection=True;";
         }
 
         public static string GetImagenComida(string tipo)
@@ -21,9 +21,9 @@ namespace Entidades.DataBase
             {
                 using (DataBaseManager.connection = new SqlConnection(DataBaseManager.stringConnection))
                 {
-                    string querry = "SELEC imaen FROM comidas WHERE tipo_comida = @comida";
+                    string querry = "SELECT imagen FROM comidas WHERE tipo_comida = @comida";
 
-                    SqlCommand cmd = new SqlCommand(querry);
+                    SqlCommand cmd = new SqlCommand(querry, DataBaseManager.connection);
 
                     cmd.Parameters.AddWithValue("comida", tipo);
 
@@ -33,16 +33,15 @@ namespace Entidades.DataBase
 
                     if (reader.Read())
                     {
-                        return reader.GetString(2);
+                        return reader.GetString(0);
                     }
 
-                    throw new ComidaInvalidaExeption("Comida inexistente");
+                    throw new ComidaInvalidaException("Comida Inexistente\n");
                 }
             }
             catch (DataBaseManagerException ex)
             {
-
-                throw new DataBaseManagerException("Error al leer la base de dato.", ex.InnerException);
+                throw new DataBaseManagerException("Error al obtener la imagen de la base de datos");
             }
         }
 
@@ -52,9 +51,9 @@ namespace Entidades.DataBase
             {
                 using (DataBaseManager.connection = new SqlConnection(DataBaseManager.stringConnection))
                 {
-                    string querry = "INSERT INTO tickests (empleado, ticket) VALUES (@empleados, @tk)";
+                    string query = "INSERT INTO tickets (empleado, ticket) VALUES (@empleado, @tk)";
 
-                    SqlCommand cmd = new SqlCommand(querry, DataBaseManager.connection);
+                    SqlCommand cmd = new SqlCommand(query, DataBaseManager.connection);
 
                     cmd.Parameters.AddWithValue("empleado", nombreEmplado);
                     cmd.Parameters.AddWithValue("tk", comida.Ticket);

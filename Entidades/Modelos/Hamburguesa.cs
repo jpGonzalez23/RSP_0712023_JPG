@@ -16,31 +16,42 @@ namespace Entidades.Modelos
         private double costo;
         private bool estado;
         private string imagen;
+        
         List<EIngrediente> ingredientes;
+        
         Random random;
 
         static Hamburguesa() => Hamburguesa.costoBase = 1500;
 
-
         public Hamburguesa() : this(false) { }
+
         public Hamburguesa(bool esDoble)
         {
             this.esDoble = esDoble;
             this.random = new Random();
+            this.ingredientes = new List<EIngrediente>();
         }
 
         public string Ticket => $"{this}\nTotal a pagar:{this.costo}";
 
-        bool IComestible.Estado => this.estado;
+        //bool IComestible.Estado => this.estado;
+
+        public bool Estado => this.estado;
 
         public string Imagen => this.imagen; 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         private void AgregarIngredientes()
         {
             this.ingredientes = this.random.IngredientesAleatorios();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private string MostrarDatos()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -54,16 +65,25 @@ namespace Entidades.Modelos
 
         }
 
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() => this.MostrarDatos();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cocinero"></param>
         public void FinalizarPreparacion(string cocinero)
         {
             this.costo = this.ingredientes.CalcularCostoIngredientes(Hamburguesa.costoBase);
-            this.estado = !this.estado;
+            this.estado = !this.Estado;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void IniciarPreparacion()
         {
             if (!this.estado)
@@ -72,12 +92,13 @@ namespace Entidades.Modelos
 
                 try
                 {
-                    this.imagen = DataBaseManager.GetImagenComida($"Hamburguesa {indice}");
+                    this.imagen = DataBaseManager.GetImagenComida($"Hamburguesa_{indice}");
                     this.AgregarIngredientes();
                 }
                 catch (DataBaseManagerException ex)
                 {
                     throw new DataBaseManagerException(ex.Message);
+                    FileManager.Guardar(ex.Message, "logs.txt", true);
                 }
             }
         }

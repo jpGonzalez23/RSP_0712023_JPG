@@ -15,6 +15,7 @@ namespace Entidades.MetodosDeExtension
         public static double CalcularCostoIngredientes(this List<EIngrediente> ingredientes, int costoInicial)
         {
             ingredientes.ForEach(ingrediente => costoInicial += (costoInicial * (int)ingrediente / 100));
+            
             return costoInicial;
         }
 

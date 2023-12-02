@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades.Excepciones
 {
-    public class ComidaInvalidaExeption : Exception
+    public class ComidaInvalidaException : Exception
     {
-        public ComidaInvalidaExeption(string? message) : base(message)
+        public ComidaInvalidaException(string? message) : base(message)
         {
         }
     }

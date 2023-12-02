@@ -4,7 +4,6 @@ using Entidades.Exceptions;
 using Entidades.Files;
 using Entidades.Interfaces;
 
-
 namespace Entidades.Modelos
 {
     public delegate void DelegadoDemoraAtencion(double demora);
@@ -16,11 +15,14 @@ namespace Entidades.Modelos
         public event DelegadoNuevoIngreso OnIngreso;
 
         private CancellationTokenSource cancellation;
+
         private int cantPedidosFinalizados;
         private double demoraPreparacionTotal;
-        private T menu;
+        
         private string nombre;
+
         private Task tarea;
+        private T menu;
 
         public Cocinero(string nombre)
         {
@@ -52,7 +54,9 @@ namespace Entidades.Modelos
 
         //no hacer nada
         public double TiempoMedioDePreparacion { get => this.cantPedidosFinalizados == 0 ? 0 : this.demoraPreparacionTotal / this.cantPedidosFinalizados; }
+
         public string Nombre { get => nombre; }
+
         public int CantPedidosFinalizados { get => cantPedidosFinalizados; }
 
         private void IniciarIngreso()
@@ -93,15 +97,14 @@ namespace Entidades.Modelos
         {
             int tiempoEspera = 0;
 
-            while (this.OnDemora is not null && !this.menu.Estado && this.cancellation.IsCancellationRequested)
+            while (this.OnDemora is not null && !this.menu.Estado && !this.cancellation.IsCancellationRequested)
             {
-                tiempoEspera++;
                 this.OnDemora.Invoke(tiempoEspera);
                 Thread.Sleep(1000);
+                tiempoEspera++;
             }
 
             this.demoraPreparacionTotal += tiempoEspera;
-
         }
     }
 }

@@ -3,7 +3,7 @@
   <Class Name="Entidades.Files.FileManager" BaseTypeListCollapsed="true">
     <Position X="3.25" Y="3.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAACAAAAACAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAAAAACAAAAAAACAAAAAAAABAAAAAA=</HashCode>
       <FileName>Archivos\FileManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,7 +45,7 @@
   <Class Name="Entidades.Modelos.Hamburguesa" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="0.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAmABAIAAAAAAAAAAAAAAAEAAAAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AoAAmABIIAAAAAAGgAAAAAAAEAAAAhAAAAQAAAAAAAA=</HashCode>
       <FileName>Modelos\Hamburguesa.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -72,7 +72,7 @@
     </TypeIdentifier>
   </Enum>
   <Delegate Name="Entidades.Modelos.DelegadoDemoraAtencion" Collapsed="true">
-    <Position X="4.5" Y="5.75" Width="1.5" />
+    <Position X="4.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Modelos\Cocinero.cs</FileName>
