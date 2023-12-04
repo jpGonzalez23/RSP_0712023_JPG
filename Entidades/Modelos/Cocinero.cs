@@ -24,6 +24,10 @@ namespace Entidades.Modelos
         private Task tarea;
         private T menu;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nombre"></param>
         public Cocinero(string nombre)
         {
             this.nombre = nombre;
@@ -35,8 +39,8 @@ namespace Entidades.Modelos
             get
             {
                 return this.tarea is not null && (this.tarea.Status == TaskStatus.Running ||
-                    this.tarea.Status == TaskStatus.WaitingToRun ||
-                    this.tarea.Status == TaskStatus.WaitingForActivation);
+                                                  this.tarea.Status == TaskStatus.WaitingToRun ||
+                                                  this.tarea.Status == TaskStatus.WaitingForActivation);
             }
             set
             {
@@ -59,6 +63,10 @@ namespace Entidades.Modelos
 
         public int CantPedidosFinalizados { get => cantPedidosFinalizados; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DataBaseManagerException"></exception>
         private void IniciarIngreso()
         {
             CancellationToken token = this.cancellation.Token;
@@ -77,12 +85,16 @@ namespace Entidades.Modelos
                     }
                     catch (DataBaseManagerException ex)
                     {
+                        FileManager.Guardar(ex.Message, "logs.txt", true);
                         throw new DataBaseManagerException("Error al guardar el ticket", ex.InnerException);
                     }
                 }
             }, token);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void NotificarNuevoIngreso()
         {
             if (this.OnIngreso is not null)
@@ -93,15 +105,18 @@ namespace Entidades.Modelos
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void EsperarProximoIngreso()
         {
             int tiempoEspera = 0;
 
             while (this.OnDemora is not null && !this.menu.Estado && !this.cancellation.IsCancellationRequested)
             {
+                tiempoEspera++;
                 this.OnDemora.Invoke(tiempoEspera);
                 Thread.Sleep(1000);
-                tiempoEspera++;
             }
 
             this.demoraPreparacionTotal += tiempoEspera;

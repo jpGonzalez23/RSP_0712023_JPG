@@ -21,10 +21,20 @@ namespace Entidades.Modelos
         
         Random random;
 
+        /// <summary>
+        /// 
+        /// </summary>
         static Hamburguesa() => Hamburguesa.costoBase = 1500;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Hamburguesa() : this(false) { }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="esDoble"></param>
         public Hamburguesa(bool esDoble)
         {
             this.esDoble = esDoble;
@@ -32,9 +42,10 @@ namespace Entidades.Modelos
             this.ingredientes = new List<EIngrediente>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Ticket => $"{this}\nTotal a pagar:{this.costo}";
-
-        //bool IComestible.Estado => this.estado;
 
         public bool Estado => this.estado;
 
@@ -97,8 +108,8 @@ namespace Entidades.Modelos
                 }
                 catch (DataBaseManagerException ex)
                 {
-                    throw new DataBaseManagerException(ex.Message);
                     FileManager.Guardar(ex.Message, "logs.txt", true);
+                    throw new DataBaseManagerException(ex.Message);
                 }
             }
         }

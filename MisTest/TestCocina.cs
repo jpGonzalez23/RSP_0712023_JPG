@@ -11,11 +11,12 @@ namespace MisTest
         [ExpectedException(typeof(FileManagerException))]
         public void AlGuardarUnArchivo_ConNombreInvalido_TengoUnaExcepcion()
         {
-            //arrange
+            //arrage
 
             //act
 
             //assert
+
         }
 
         [TestMethod]
@@ -23,11 +24,13 @@ namespace MisTest
         public void AlInstanciarUnCocinero_SeEspera_PedidosCero()
         {
             //arrange
-
+            Cocinero<Hamburguesa> cocinero = new Cocinero<Hamburguesa>("Pepe");
 
             //act
+            int pedidos = cocinero.CantPedidosFinalizados;
 
             //assert
+            Assert.AreEqual(0, pedidos);
         }
     }
 }

@@ -118,7 +118,7 @@ namespace FrmView
             }
             catch (FileManagerException ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FileManager.Guardar(ex.Message, "logs.txtd", true);
             }
         }
     }
