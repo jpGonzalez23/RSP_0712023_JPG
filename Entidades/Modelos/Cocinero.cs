@@ -99,7 +99,6 @@ namespace Entidades.Modelos
             {
                 while (!this.cancellation.IsCancellationRequested)
                 {
-                    
                     this.EsperarProximoIngreso();
                     this.cantPedidosFinalizados++;
 
