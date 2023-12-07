@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wx1pAb+A9VRjhfrtLivUSPnEEWFaSnn77XI4IBsKfdEgwnHq5uRv42n4Es0W5V2a5IuAKkRAsiLAtekgio7Ymg==",
+  "dgSpecHash": "QYJaCgzyLP7mf4B+y06jY6kjySuvu0HDsYLLSjc61KdqyVbrW4mYqjVy0Jt+GPkoAbGIdJMehlHi3BL3y3omNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\FrmView\\FrmView.csproj",
+  "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\FrmView\\FrmView.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

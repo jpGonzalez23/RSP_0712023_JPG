@@ -21,7 +21,7 @@ namespace Entidades.Files
         /// </summary>
         static FileManager()
         {
-            FileManager.path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\20231205_Gonzalez_JP\\";
+            FileManager.path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\07122023_Gonzalez_JP\\";
             FileManager.ValidaExistenciaDeDirectorio();
         }
 

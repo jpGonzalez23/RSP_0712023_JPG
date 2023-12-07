@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\MisTest.csproj": {}
+    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\MisTest\\MisTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\MisTest.csproj": {
+    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\MisTest\\MisTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\MisTest.csproj",
+        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\MisTest\\MisTest.csproj",
         "projectName": "MisTest",
-        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\MisTest.csproj",
+        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\MisTest\\MisTest.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\obj\\",
+        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\MisTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj"
+              "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\2do cuatrimestre\\Programacion y Laboratorio II\\Parciales\\SP_07122023\\Entidades\\Entidades.csproj"
               }
             }
           }
