@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",

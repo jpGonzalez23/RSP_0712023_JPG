@@ -23,7 +23,7 @@ namespace Entidades.MetodosDeExtension
         /// Metodo para agregar ingredientes de manera de aleatoria
         /// </summary>
         /// <param name="random">Recibe un objeto ramdon</param>
-        /// <returns></returns>
+        /// <returns>Retorna el ingredientes de manera aleatoria</returns>
         public static List<EIngrediente> IngredientesAleatorios(this Random random)
         {
             List<EIngrediente> ingredientes = new List<EIngrediente>()

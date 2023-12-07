@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "THE2zekshAMNBK1wBwt2UTIF+NaEIzipKq5IivOZj4z0aYj23U230vqWMy7zZdX0W175XkOw6rkoTnkDM6DZpQ==",
+  "dgSpecHash": "OUr/HWmLUOjraUi8bkpAziTGC4DE5grDqxnAw676Znq2oiYDe8dPF70Rc8tromLqhhNJ9floT7FRngfeba6kiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\Segundo Cuatrimestre\\PyL-II-TN\\Parciales\\SP_07122023_ALUMNO\\MisTest\\MisTest.csproj",
+  "projectFilePath": "C:\\Users\\juanp\\OneDrive\\Documentos\\Facultad\\MisTest\\MisTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

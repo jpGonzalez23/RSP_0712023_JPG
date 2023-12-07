@@ -22,19 +22,19 @@ namespace Entidades.Modelos
         Random random;
 
         /// <summary>
-        /// 
+        /// Constructor estatico
         /// </summary>
         static Hamburguesa() => Hamburguesa.costoBase = 1500;
 
         /// <summary>
-        /// 
+        /// Constructor sin parametros
         /// </summary>
         public Hamburguesa() : this(false) { }
 
         /// <summary>
-        /// 
+        /// Sobrecarga del constructor
         /// </summary>
-        /// <param name="esDoble"></param>
+        /// <param name="esDoble">Recibe si la hamburguesa esDoble</param>
         public Hamburguesa(bool esDoble)
         {
             this.esDoble = esDoble;
@@ -43,16 +43,22 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Propiedad para mostrar el total a pagar
         /// </summary>
         public string Ticket => $"{this}\nTotal a pagar:{this.costo}";
 
+        /// <summary>
+        /// Propiedad para mostrar el estado
+        /// </summary>
         public bool Estado => this.estado;
 
+        /// <summary>
+        /// Propiedad para mostrar la imagen
+        /// </summary>
         public string Imagen => this.imagen; 
 
         /// <summary>
-        /// 
+        /// Motodo para agregar un ingrediente aleatoriamente 
         /// </summary>
         private void AgregarIngredientes()
         {
@@ -60,9 +66,9 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Meotodo para mostrar la hamburguesa
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retoran una cadena de strings</returns>
         private string MostrarDatos()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -77,15 +83,15 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Polimorfismo del ToString()
         /// </summary>
         /// <returns></returns>
         public override string ToString() => this.MostrarDatos();
 
         /// <summary>
-        /// 
+        /// Metodo para finalizar la preparacion
         /// </summary>
-        /// <param name="cocinero"></param>
+        /// <param name="cocinero">Recibe el nombre del cocinero</param>
         public void FinalizarPreparacion(string cocinero)
         {
             this.costo = this.ingredientes.CalcularCostoIngredientes(Hamburguesa.costoBase);
@@ -93,7 +99,7 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Metodo para inciar la preparacion
         /// </summary>
         public void IniciarPreparacion()
         {

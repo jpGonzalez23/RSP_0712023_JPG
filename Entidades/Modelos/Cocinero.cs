@@ -6,11 +6,23 @@ using Entidades.Interfaces;
 
 namespace Entidades.Modelos
 {
+    /// <summary>
+    /// Declaracion de delgado demora
+    /// </summary>
+    /// <param name="demora">Recibe el tiempo de demora</param>
     public delegate void DelegadoDemoraAtencion(double demora);
+    
+    /// <summary>
+    /// Declaracion del delegado nuevo ingreso
+    /// </summary>
+    /// <param name="menu">Recibe un menu</param>
     public delegate void DelegadoNuevoIngreso(IComestible menu);
 
     public class Cocinero<T> where T : IComestible, new()
     {
+        /// <summary>
+        /// Declaracion de eventos
+        /// </summary>
         public event DelegadoDemoraAtencion OnDemora;
         public event DelegadoNuevoIngreso OnIngreso;
 
@@ -25,9 +37,9 @@ namespace Entidades.Modelos
         private T menu;
 
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
-        /// <param name="nombre"></param>
+        /// <param name="nombre">Recibe el nombre del cocinero</param>
         public Cocinero(string nombre)
         {
             this.nombre = nombre;
@@ -64,9 +76,9 @@ namespace Entidades.Modelos
         public int CantPedidosFinalizados { get => cantPedidosFinalizados; }
 
         /// <summary>
-        /// 
+        /// Metodo para iniciar un nuevo ingreso
         /// </summary>
-        /// <exception cref="DataBaseManagerException"></exception>
+        /// <exception cref="DataBaseManagerException">Se genera una excepcion al gurardar el ticket</exception>
         private void IniciarIngreso()
         {
             CancellationToken token = this.cancellation.Token;
@@ -93,7 +105,7 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Metodo para notificar un nuevo ingreso, haciendo un invoke de evento OnIngreso
         /// </summary>
         private void NotificarNuevoIngreso()
         {
@@ -106,7 +118,7 @@ namespace Entidades.Modelos
         }
 
         /// <summary>
-        /// 
+        /// Metodo para esperar un nuevo ingreso, durmiendo el hilo principal por 1s
         /// </summary>
         private void EsperarProximoIngreso()
         {
