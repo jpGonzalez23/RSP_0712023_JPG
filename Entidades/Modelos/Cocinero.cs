@@ -99,7 +99,7 @@ namespace Entidades.Modelos
             {
                 while (!this.cancellation.IsCancellationRequested)
                 {
-                    //this.pedidoEnPreparacion = this.pedidos.Dequeue();
+                    
                     this.EsperarProximoIngreso();
                     this.cantPedidosFinalizados++;
 
@@ -133,12 +133,17 @@ namespace Entidades.Modelos
             this.demoraPreparacionTotal += tiempoEspera;
         }
 
-        public void TomarNuevoPedido<T>(T menu)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="menu"></param>
+        public void TomarNuevoPedido(T menu)
         {
-            //if (this.OnPedido != null)
-            //{
-            //    this.pedidos.Enqueue(menu);
-            //}
+            if (this.OnPedido is not null && menu is not null)
+            {
+                this.pedidos.Enqueue(menu);
+            }
         }
     }
 }
