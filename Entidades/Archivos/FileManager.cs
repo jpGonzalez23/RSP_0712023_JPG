@@ -55,7 +55,9 @@ namespace Entidades.Files
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(FileManager.path + nombreArchivo, append))
+                string filePath = Path.Combine(FileManager.path, nombreArchivo);
+                
+                using (StreamWriter sw = new StreamWriter(filePath, append))
                 {
                     sw.WriteLine(data);
                 }

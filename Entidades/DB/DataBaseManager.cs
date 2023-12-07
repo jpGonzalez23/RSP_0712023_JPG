@@ -12,7 +12,7 @@ namespace Entidades.DataBase
         
         static DataBaseManager()
         {
-            DataBaseManager.stringConnection = "Server=.;Database=SP_20231201_JPG;Trusted_Connection=True;";
+            DataBaseManager.stringConnection = "Server=.;Database=20230622SP;Trusted_Connection=True;";
         }
 
         /// <summary>

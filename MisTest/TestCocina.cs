@@ -11,16 +11,13 @@ namespace MisTest
         [ExpectedException(typeof(FileManagerException))]
         public void AlGuardarUnArchivo_ConNombreInvalido_TengoUnaExcepcion()
         {
-            //arrage
+            string data = "Test";
+            string nombreInvalido = "";
 
-            //act
-
-            //assert
-
+            FileManager.Guardar(data, nombreInvalido, false);
         }
 
         [TestMethod]
-
         public void AlInstanciarUnCocinero_SeEspera_PedidosCero()
         {
             //arrange
